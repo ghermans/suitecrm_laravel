@@ -4,6 +4,7 @@
 2. Please make an individual commit for each pull request.
 3. Please search previous suggestions before making a new one.
 4. Keep descriptions short and simple.
+5. Add the "In progress" label when you are working on a bug/feature.
 
 # SuiteCRM demo server
 
