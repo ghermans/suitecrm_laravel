@@ -34,4 +34,8 @@ For transparency into our release cycle and in striving to maintain backward com
 is maintained under the Semantic Versioning guidelines. Sometimes we screw up, but we'll adhere to 
 those rules whenever possible.
 
-See the Releases section of our github project for changelogs for each release version pf laravel_suitecrm 
+See the Releases section of our github project for changelogs for each release version of laravel_suitecrm 
+
+## Copyright and license 
+
+Code and documentation copyright 2015, Glenn Hermans, Tim Joosten. Code released under the MIT license. 
