@@ -1,27 +1,37 @@
-## Laravel PHP Framework
+# SuitePanel
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+[![Join the chat at https://gitter.im/ghermans/suitecrm_laravel](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ghermans/suitecrm_laravel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
+[![Latest Version](https://img.shields.io/github/tag/Ghermans/suitecrm_laravel.svg?style=flat&label=release)](https://github.com/ghermans/suitecrm_laravel/tags)
+[![Build Status](https://travis-ci.org/idevelopment/suitecrm_laravel.svg?branch=master)](https://travis-ci.org/idevelopment/suitecrm_laravel)
+[![dependency Status](https://img.shields.io/david/dev/idevelopment/suitecrm_laravel.svg?style=flat)](https://david-dm.org/idevelopment/suitecrm_laravel#info=Dependencies)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+SuitePanel is the Advanced Open Portal integrated in Laravel 5 (original Joomla component https://github.com/salesagility/SuiteCRM-Portal-Joomla)
 
-## Official Documentation
+# Requirements
+* PHP >= 5.4
+* MCrypt PHP Extension
+* As of PHP 5.5, some OS distributions may require you to manually install the PHP JSON extension.
+  When using Ubuntu, this can be done via apt-get install php5-json.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
+# Installation guide
+* http://suitecm-laravel-portal.readthedocs.org/
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+# Quick start
+```
+composer install
+```
 
-## Security Vulnerabilities
+```
+edit .env_example and save as .env
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+```
+php artisan migrate
+```
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+```
+php artisan db:seed
+```
