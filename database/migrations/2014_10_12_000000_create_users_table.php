@@ -10,7 +10,7 @@ class CreateUsersTable extends Migration
      *
      * @return void
      */
-     ublic function up()
+     public function up()
      	{
      		Schema::create('users', function(Blueprint $table)
      		{
