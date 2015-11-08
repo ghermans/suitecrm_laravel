@@ -49,6 +49,8 @@ Route::post('meetings/create', 'MeetingsController@store');
 Route::get('meetings/read', 'MeetingsController@show');
 
 Route::get('profile', 'UserController@profile');
+Route::patch('profile', 'UserController@updateUser');
+
 Route::get('profile/chpass', 'UserController@chpass');
 Route::post('profile/chpass', 'UserController@chpassMethod');
 

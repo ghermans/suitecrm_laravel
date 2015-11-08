@@ -72,6 +72,22 @@ class UserController extends Controller
         return \Redirect::back();
     }
 
+    public function update_profile(Request $request)
+    {
+        $user = User::find($id);
+        $user->fname = $request->get('fname');
+        $user->name = $request->get('name');
+        $user->address = $request->get('address');
+        $user->postal_code = $request->get('postal_code');
+        $user->city = $request->get('city');
+        $user->country = $request->get('country');
+        $user->email = $request->get('email');
+        $user->update();
+
+        \Session::flash('message', "User details have been updated");
+        return \Redirect::back();
+    }
+
     public function destroy($id)
     {
       $user = User::find($id);
