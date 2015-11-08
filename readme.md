@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/idevelopment/suitecrm_laravel.png?label=ready&title=Ready)](https://waffle.io/idevelopment/suitecrm_laravel)
 # SuitePanel
 
 [![Join the chat at https://gitter.im/ghermans/suitecrm_laravel](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ghermans/suitecrm_laravel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
