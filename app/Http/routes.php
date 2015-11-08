@@ -51,8 +51,8 @@ Route::get('meetings/read', 'MeetingsController@show');
 Route::get('profile', 'UserController@profile');
 Route::patch('profile', 'UserController@updateUser');
 
-Route::get('profile/chpass', 'UserController@chpass');
-Route::post('profile/chpass', 'UserController@chpassMethod');
+Route::get('profile/chpass', 'UserController@profile_chpass');
+Route::patch('profile/chpass', 'UserController@update_chpass');
 
 Route::resource('rest', 'RestController');
 Route::get('quotes', 'QuotesController@index');
