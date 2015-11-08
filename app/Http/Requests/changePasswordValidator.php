@@ -25,8 +25,7 @@ class changePasswordValidator extends Request
     {
       return [
         'current_pass' => 'required',
-        'password' => 'required|min:6',
-        'password_confirmation' => 'confirmed',
+        'password' => 'required|confirmed|min:6'
       ];
     }
 }
