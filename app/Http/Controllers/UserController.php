@@ -79,4 +79,22 @@ class UserController extends Controller
       return redirect('admin/users');
     }
 
+    public function profile()
+    {
+        $country_list = Countries::all();
+        return view('auth/profile', ['countries' => $country_list ]);
+    }
+
+
+    public function profile_chpass()
+    {
+        return view('auth/chpass');
+    }
+
+
+    public function chpassMethod(changePasswordValidator $input)
+    {
+
+    }
+
 }

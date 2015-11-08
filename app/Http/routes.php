@@ -40,18 +40,20 @@ Route::get('admin/users/edit/{id}', 'UserController@edit');
 Route::get('admin/users/remove/{id}', 'UserController@destroy');
 Route::patch('admin/users/updateUser/{id}', 'UserController@updateUser');
 
-
 Route::get('cases', 'CasesController@index');
 Route::get('cases/create', 'CasesController@create');
 Route::get('cases/read', 'CasesController@read');
 
 Route::post('cases/store', 'CasesController@store');
 
-
 Route::get('meetings', 'MeetingsController@index');
 Route::get('meetings/create', 'MeetingsController@create');
 Route::post('meetings/create', 'MeetingsController@store');
 Route::get('meetings/read', 'MeetingsController@show');
+
+Route::get('profile', 'UserController@profile');
+Route::get('profile/chpass', 'UserController@chpass');
+Route::post('profile/chpass', 'UserController@chpassMethod');
 
 Route::resource('rest', 'RestController');
 Route::get('quotes', 'QuotesController@index');
