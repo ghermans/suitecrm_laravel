@@ -9,79 +9,72 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+  public function __construct()
+  {
+      $this->middleware('auth');
+      $this->middleware('language');
+  }
+
     public function index()
     {
-        //
+        $users = User::all();
+        return view('admin.users', ['users' => $users]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+      $countries = Countries::all();
+        return view('auth.create_user', ['countries' => $countries]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(Request $request, createUserValidator $input)
     {
-        //
+
+      $user = new User;
+      $user->fname = $request->get('fname');
+      $user->name = $request->get('name');
+      $user->address = $request->get('address');
+      $user->postal_code = $request->get('postal_code');
+      $user->city = $request->get('city');
+      $user->country = $request->get('country');
+      $user->email = $request->get('email');
+      $user->password = bcrypt($request->get('password'));
+      $user->save();
+
+      \Session::flash('message', "User has been added to the portal");
+      return redirect('admin/users');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+      $country_list = Countries::all();
+      $user = User::find($id);
+      $errors = \Session::get('msg');
+      return view('auth.display_user', compact('user','country_list','errors'));
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function updateUser($id, Request $request)
     {
-        //
+        $user = User::find($id);
+        $user->fname = $request->get('fname');
+        $user->name = $request->get('name');
+        $user->address = $request->get('address');
+        $user->postal_code = $request->get('postal_code');
+        $user->city = $request->get('city');
+        $user->country = $request->get('country');
+        $user->email = $request->get('email');
+        $user->update();
+
+        \Session::flash('message', "User details have been updated");
+        return \Redirect::back();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+      $user = User::find($id);
+      $user->delete();
+      return redirect('admin/users');
     }
+
 }
