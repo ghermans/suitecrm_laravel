@@ -1,17 +1,14 @@
 @extends('welcome')
 
 @section('content')
-
-    <div class="container">
+<div class="container">
 <div class='loginColumns block block-size-login highlight-color-purple'>
 <div class='block-content-outer'>
 <div class='block-content-inner'>
         <div class="row">
-
             <div class="col-md-10">
-
-                     <img src="{{asset('img/logo.png')}}" class="logo-name">
-                    <div class="clearfix">&nbsp;</div>
+             <img src="{{asset('img/logo.png')}}" class="logo-name">
+            <div class="clearfix">&nbsp;</div>
 
              @if (count($errors) > 0)
 						<div class="text-danger">
@@ -51,9 +48,7 @@
 
         </div>
         </div>
-
     </div>
 </div>
 </div>
-
 @endsection
