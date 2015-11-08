@@ -12,7 +12,7 @@ class createCaseValidator extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,7 +23,9 @@ class createCaseValidator extends Request
     public function rules()
     {
         return [
-            //
+          'case_type' => 'required',
+    			'case_subject' => 'required',
+    			'case_message' => 'required'
         ];
     }
 }
