@@ -54,6 +54,7 @@
                                             <i class="fa fa-home fa-lg"></i>
                                         </a>
                                     </li>
+                                    <li><a href={{ url('kb') }}>Knowledge base</a></li>
                                 </ul>
                             </div><!-- /.navbar-collapse -->
                         </div>
