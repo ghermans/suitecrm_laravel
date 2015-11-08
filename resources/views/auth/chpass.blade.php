@@ -7,9 +7,26 @@
 @section('content')
 <div class="page-header"><h2>{{ Lang::get('aop.chpass_title') }}</h2> </div>
 
+
+<div class="clearfix">&nbsp;</div>
+ @if (count($errors) > 0)
+ <div class="alert alert-danger">
+ <ul>
+ @foreach ($errors->all() as $error)
+ <li>{{ $error }}</li>
+     @endforeach
+ </ul>
+</div>
+@endif
+
+
+@if (Session::has('message'))
+   <div class="alert alert-success">{{ Session::get('message') }}</div>
+@endif
+
+
  <div class="well">
-<form action="" method="POST" class="form-horizontal">
-  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+  {!! Form::model($user, array('url' => "profile/chpass/", 'method' => 'PATCH', 'class' => 'form-horizontal')) !!}
   <div class="form-group">
     <label for="current_pass" class="col-sm-3 control-label">{{ Lang::get('aop.current_password') }}</label>
     <div class="col-sm-6">
@@ -18,16 +35,16 @@
   </div>
 
   <div class="form-group">
-    <label for="new_pass" class="col-sm-3 control-label">{{ Lang::get('aop.new_password') }}</label>
+    <label for="password" class="col-sm-3 control-label">{{ Lang::get('aop.new_password') }}</label>
     <div class="col-sm-6">
-      <input type="password" name="new_pass" id="new_pass" class="form-control">
+      <input type="password" name="password" id="password" class="form-control">
     </div>
   </div>
 
     <div class="form-group">
     <label for="confirm_pass" class="col-sm-3 control-label">{{ Lang::get('aop.confirm_password') }}</label>
     <div class="col-sm-6">
-      <input type="password" name="confirm_pass" id="confirm_pass" class="form-control">
+      <input type="password" name="password_confirmation" id="confirm_pass" class="form-control">
     </div>
   </div>
 

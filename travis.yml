@@ -5,13 +5,10 @@ php:
     - 5.6
     - hhvm
 
-env:
-  global:
-    - CODECOV_TOKEN=:d9df583e-6b41-44cd-adb0-267329704f52
-
 before_script:
     - travis_retry composer self-update
     - travis_retry composer install --no-interaction --prefer-source --dev
+
 script:
     - vendor/bin/phpunit --coverage-clover=coverage.xml
 

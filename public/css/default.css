@@ -438,6 +438,10 @@ fieldset[disabled] .btn-custom.active {
   color: #ffffff;
 }
 
+.navbar-menu-item{padding:0.3em 1.5em; padding-top:0.1em;padding-bottom:0.1em;color:#333;}
+.navbar-menu-item .label{color:#000;font-size:1em;padding:0;}
+.menu-language{padding-top:0.1em;padding-bottom:0.1em;color:#333;}
+
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;

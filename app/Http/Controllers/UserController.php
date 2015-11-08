@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\createUserValidator;
+use App\Http\Requests\changePasswordValidator;
+
 use App\User;
 use App\Countries;
 
@@ -92,6 +94,7 @@ class UserController extends Controller
     {
       $user = User::find($id);
       $user->delete();
+      \Session::flash('message', "User has been removed from the portal");
       return redirect('admin/users');
     }
 
@@ -104,13 +107,19 @@ class UserController extends Controller
 
     public function profile_chpass()
     {
-        return view('auth/chpass');
+      $user = \Auth::user();
+        return view('auth/chpass', ['user' => $user]);
     }
 
 
-    public function chpassMethod(changePasswordValidator $input)
+    public function update_chpass(Request $request, changePasswordValidator $input)
     {
+        $user = \Auth::user();
+        $user->password = bcrypt($request->get('password'));
+        $user->update();
 
+        \Session::flash('message', "Password has been updated");
+        return \Redirect::back();
     }
 
 }

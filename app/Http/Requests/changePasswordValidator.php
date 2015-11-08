@@ -13,7 +13,7 @@ class changePasswordValidator extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,9 @@ class changePasswordValidator extends Request
      */
     public function rules()
     {
-        return [
-            //
-        ];
+      return [
+        'current_pass' => 'required',
+        'password' => 'required|confirmed|min:6'
+      ];
     }
 }
