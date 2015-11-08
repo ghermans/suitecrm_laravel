@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\createUserValidator;
+use App\User;
+use App\Countries;
 
 class UserController extends Controller
 {

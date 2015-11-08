@@ -6,12 +6,13 @@ use App\Http\Requests\Request;
 
 class createUserValidator extends Request
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+
+  public function authorize()
+  {
+      return false;
+  }
+
+    public function rules()
     {
       return [
         'name' => 'required',
@@ -22,7 +23,7 @@ class createUserValidator extends Request
         'country' => 'required',
         'email' => 'required|email|unique:users',
         'password' => 'required',
-        'confirm_password' => 'required'
+        'confirm_password' => 'required',
       ];
     }
 
@@ -31,7 +32,7 @@ class createUserValidator extends Request
      *
      * @return array
      */
-    public function rules()
+    public function messages()
     {
       {
       return [
@@ -41,7 +42,7 @@ class createUserValidator extends Request
           'postal_code.required' => 'Please fill in the postal code field.',
           'city.required' => 'Please fill in the city field.',
           'country.required' => 'Please fill in the country field.',
-          'password.required' => 'Please fill in the password field.',
+          'password.required' => 'Please fill in the password field.'
           ];
        }
     }
