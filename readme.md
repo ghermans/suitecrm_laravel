@@ -35,3 +35,5 @@ php artisan migrate
 ```
 php artisan db:seed
 ```
+
+[![Throughput Graph](https://graphs.waffle.io/idevelopment/suitecrm_laravel/throughput.svg)](https://waffle.io/idevelopment/suitecrm_laravel/metrics) 
