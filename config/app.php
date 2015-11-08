@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SuiteCRMSomeRandomKeyString'),
+    'key' => env('APP_KEY', 'BBSc89PACbEONpMXBxqsaasx0uTTyk1f'),
 
     'cipher' => 'AES-256-CBC',
 
