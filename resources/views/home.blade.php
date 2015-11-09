@@ -78,9 +78,9 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Number</th>
-                        <th>Subject</th>
-                        <th>Status</th>
+                        <th>{{Lang::get('aop.quotes_number')}}</th>
+                        <th class="col-md-6">{{Lang::get('aop.quotes_subject')}}</th>
+                        <th>{{Lang::get('aop.quotes_status')}}</th>
                     </tr>
                 </thead>
                 <tbody>
