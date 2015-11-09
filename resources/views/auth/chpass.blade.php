@@ -28,21 +28,21 @@
  <div class="well">
   {!! Form::model($user, array('url' => "profile/chpass/", 'method' => 'PATCH', 'class' => 'form-horizontal')) !!}
   <div class="form-group">
-    <label for="current_pass" class="col-sm-3 control-label">{{ Lang::get('aop.current_password') }}</label>
+    <label for="current_pass" class="col-sm-3 control-label">{{ Lang::get('aop.current_password') }} <span class="text-danger">*</span></label>
     <div class="col-sm-6">
       <input type="password" name="current_pass" id="current_pass" class="form-control">
     </div>
   </div>
 
   <div class="form-group">
-    <label for="password" class="col-sm-3 control-label">{{ Lang::get('aop.new_password') }}</label>
+    <label for="password" class="col-sm-3 control-label">{{ Lang::get('aop.new_password') }} <span class="text-danger">*</span></label>
     <div class="col-sm-6">
       <input type="password" name="password" id="password" class="form-control">
     </div>
   </div>
 
     <div class="form-group">
-    <label for="confirm_pass" class="col-sm-3 control-label">{{ Lang::get('aop.confirm_password') }}</label>
+    <label for="confirm_pass" class="col-sm-3 control-label">{{ Lang::get('aop.confirm_password') }} <span class="text-danger">*</span></label>
     <div class="col-sm-6">
       <input type="password" name="password_confirmation" id="confirm_pass" class="form-control">
     </div>
