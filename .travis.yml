@@ -4,6 +4,12 @@ php:
     - 5.5
     - 5.6
     - hhvm
+
+env:
+  global:
+    - CODECOV_TOKEN=:d9df583e-6b41-44cd-adb0-267329704f52
+install:
+  - pip install codecov
 before_script:
     - travis_retry composer self-update
     - travis_retry composer install --no-interaction --prefer-source --dev

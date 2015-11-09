@@ -5,7 +5,7 @@
 [![Latest Version](https://img.shields.io/github/tag/Ghermans/suitecrm_laravel.svg?style=flat&label=release)](https://github.com/ghermans/suitecrm_laravel/tags)
 [![Build Status](https://travis-ci.org/idevelopment/suitecrm_laravel.svg?branch=master)](https://travis-ci.org/idevelopment/suitecrm_laravel)
 [![dependency Status](https://img.shields.io/david/dev/idevelopment/suitecrm_laravel.svg?style=flat)](https://david-dm.org/idevelopment/suitecrm_laravel#info=Dependencies)
-
+[![Stories in Ready](https://badge.waffle.io/idevelopment/suitecrm_laravel.png?label=ready&title=Ready)](https://waffle.io/idevelopment/suitecrm_laravel)
 
 SuitePanel is the Advanced Open Portal integrated in Laravel 5 (original Joomla component https://github.com/salesagility/SuiteCRM-Portal-Joomla)
 
@@ -35,3 +35,6 @@ php artisan migrate
 ```
 php artisan db:seed
 ```
+
+# Graph of work completed
+[![Throughput Graph](https://graphs.waffle.io/idevelopment/suitecrm_laravel/throughput.svg)](https://waffle.io/idevelopment/suitecrm_laravel/metrics) 
