@@ -17,6 +17,7 @@ class QuotesController extends Controller
 
   public function index()
     {
-        return view('quotes.list');
+      $lang = \Session::get('lang');
+      return view('quotes.list', ['lang' => $lang]);
     }
 }

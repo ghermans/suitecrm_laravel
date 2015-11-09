@@ -9,7 +9,7 @@
 @section('content')
 <div class="panel panel-default">
             <div class="panel-heading tocustomer">
-                <h3 class="panel-title">Open cases</h3>
+              <h3 class="panel-title">{{Lang::get('aop.case_home_title')}}</h3>
             </div>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -42,14 +42,14 @@
         <div class="clearfix">&nbsp;</div>
         <div class="panel panel-default">
             <div class="panel-heading tocustomer">
-                <h3 class="panel-title">Planned meetings</h3>
+                <h3 class="panel-title">{{Lang::get('aop.meetings_home_title')}}</h3>
             </div>
           <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>{{ lang::get('aop.meetings_sdate')}}</th>
-                        <th class="col-md-6">Subject</th>
+                        <th class="col-md-6">{{ Lang::get('aop.meetings_subject') }}</th>
                         <th class="">{{ Lang::get('aop.case_last_update') }}</th>
                     </tr>
                 </thead>
@@ -72,7 +72,7 @@
         <div class="clearfix">&nbsp;</div>
         <div class="panel panel-default">
             <div class="panel-heading tocustomer">
-                <h3 class="panel-title">Open Quotes</h3>
+                <h3 class="panel-title">{{Lang::get('aop.quotes_home_title')}}</h3>
             </div>
           <div class="table-responsive">
             <table class="table table-striped">
@@ -85,9 +85,9 @@
                 </thead>
                 <tbody>
                     <tr>
-                      <td>Testing</td>
+                      <td>#15</td>
                       <td>Testingwithlongword</td>
-                      <td>2ndverylongword</td>
+                      <td>Closed won</td>
                     </tr>
                 </tbody>
             </table>

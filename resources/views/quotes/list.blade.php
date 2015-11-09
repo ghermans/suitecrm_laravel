@@ -11,31 +11,25 @@
    <div class="row">
     <div class="col-md-3">
      <input type="text" id="quote_number" name="quote_number"  class="form-control input-sm">
-     <span class="help-block">Number</span>
+     <span class="help-block">{{ Lang::get('aop.quotes_number')}}</span>
     </div>
 
   <div class="col-md-3">
     <select name="quote_status" class="form-control">
       <option selected=""></option>
-      <option value="Draft">Draft</option>
-      <option value="Negotiation">Negotiation</option>
-      <option value="Delivered">Delivered</option>
-      <option value="On_hold">On hold</option>
-      <option value="Confirmed">Confirmed</option>
-      <option value="closed_accpted">Closed Accepted</option>
-      <option value="closed_lost">Closed Lost</option>
-      <option value="closed_dead">Closed Dead</option>
+      <option value="Confirmed">{{ Lang::get('aop.confirmed')}}</option>
+      <option value="closed_accpted">{{ Lang::get('aop.closed_accepted')}}</option>
     </select>
-     <span class="help-block">Status</span>
+     <span class="help-block">{{ Lang::get('aop.quotes_status')}}</span>
   </div>
 
   <div class="col-md-3">
     <input type="text" class="form-control" id="validuntill">
-    <span class="help-block"> Valid untill</span>
+    <span class="help-block"> {{ Lang::get('aop.quotes_valid_untill')}}</span>
   </div>
   <script type="text/javascript">
     $(function () {
-        $('#validuntill').datetimepicker({ format: 'DD-M-YYYY',  locale: '', showClose: true});
+        $('#validuntill').datetimepicker({ format: 'DD-M-YYYY',  locale: '{{ $lang }}', showClose: true});
     });
 </script>
     <div class="col-md-2">
@@ -46,45 +40,27 @@
 </div>
 </div>
 
-<table class="table table-bordered table-striped">
+<table class="table table-striped">
   <thead>
-    <th class="col-md-1">Number</th>
-    <th class="col-md-5">Title</th>
-    <th class="col-md-2">Stage</th>
-    <th class="col-md-2">Grand total</th>
-    <th>Valid untill</th>
+    <th class="col-md-1">{{ Lang::get('aop.quotes_number')}}</th>
+    <th class="col-md-6">{{ Lang::get('aop.quotes_subject')}}</th>
+    <th class="text-center col-md-2">{{ Lang::get('aop.quotes_grand_total')}}</th>
+    <th class="text-center col-md-2">{{ Lang::get('aop.quotes_valid_untill')}}</th>
    </thead>
    <tbody>
     <tr>
      <td><a href="#1">#1</a></td>
      <td><a href="#">Suite portal</a></td>
-     <td class="text-success"><strong>Closed Accepted</strong></td>
-     <td>&euro; 0.00</td>
-     <td>27/11/2015</td>
+     <td class="text-center">&euro; 0.00</td>
+     <td class="text-center">27/11/2015</td>
     </tr>
+
     <tr>
      <td><a href="#1">#1</a></td>
      <td><a href="#">Suite portal</a></td>
-     <td class="text-success"><strong>Confirmed</strong></td>
-     <td>&euro; 0.00</td>
-     <td>27/11/2015</td>
-    </tr>
-    <tr>
-     <td><a href="#1">#1</a></td>
-     <td><a href="#">Suite portal</a></td>
-     <td class="text-danger"><strong>Closed Dead</strong></td>
-     <td>&euro; 0.00</td>
-     <td>27/11/2015</td>
-    </tr>
-    <tr>
-     <td><a href="#1">#1</a></td>
-     <td><a href="#">Suite portal</a></td>
-     <td class="text-danger"><strong>Closed Lost</strong></td>
-     <td>&euro; 0.00</td>
-     <td>27/11/2015</td>
+     <td class="text-center">&euro; 0.00</td>
+     <td class="text-center">27/11/2015</td>
     </tr>
    </tbody>
-</table >
-
-
+</table>
 @endsection
