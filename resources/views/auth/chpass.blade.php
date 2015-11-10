@@ -6,8 +6,6 @@
 
 @section('content')
 <div class="page-header"><h2>{{ Lang::get('aop.chpass_title') }}</h2> </div>
-
-
 <div class="clearfix">&nbsp;</div>
  @if (count($errors) > 0)
  <div class="alert alert-danger">
