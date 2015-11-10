@@ -24,6 +24,8 @@ Route::get('suitecrm/connect', 'SuiteCrmAuth@Auth');
 Route::get('admin', 'AdminController@index');
 Route::get('admin/connector', 'AdminController@connector');
 Route::post('admin/connector', 'AdminController@store_connector');
+Route::get('admin/mail', 'AdminController@mail');
+
 
 Route::get('admin/users', 'UserController@index');
 Route::get('admin/users/create', 'UserController@create');
