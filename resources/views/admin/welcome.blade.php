@@ -14,9 +14,8 @@
       <ul class="list-group">
         <li class="list-group-item"><a href="">Portal settings</a></li>
         <li class="list-group-item"><a href="">Announcements</a></li>
-        <li class="list-group-item"><a href="">Mail settings</a></li>
+        <li class="list-group-item"><a href="{{ url('admin/mail')}}">Mail settings</a></li>
         <li class="list-group-item"><a href="{{ url('admin/connector')}}">SuiteCRM connector</a></li>
-
       </ul>
     </div>
   </div>
