@@ -42,6 +42,8 @@ return [
 	"langen" => "Engels",
 	"langfr" => "Frans",
 
+	"timezone" => "Tijdzone",	
+
 	"meetings_title" => "Vergaderingen",
 	"meetings_title_create" => "Nieuwe vergadering",
 	"meetings_home_title" => "Geplande Vergaderingen",

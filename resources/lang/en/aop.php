@@ -41,6 +41,9 @@ return [
 	"langen" => "English",
 	"langfr" => "French",
 
+	"timezone" => "Timezone",
+
+
 	"meetings_title" => "Meetings",
 	"meetings_home_title" => "Planned meetings",
 	"meetings_title_create" => "Request meeting",

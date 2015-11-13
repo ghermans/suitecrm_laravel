@@ -43,12 +43,10 @@
                             <small>{{ Lang::get('aop.forgot_password') }}</small>
                         </a>
                     </form>
-
                 </div>
-
-        </div>
+            </div>
         </div>
     </div>
-</div>
+  </div>
 </div>
 @endsection

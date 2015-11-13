@@ -41,6 +41,9 @@ return [
 	"langen" => "Anglais",
 	"langfr" => "Français",
 
+	"timezone" => "Timezone",
+
+
 	"meetings_title" => "Réunion",
 	"meetings_title_create" => "Nouvelle réunion",
 	"meetings_type" => "Type",
