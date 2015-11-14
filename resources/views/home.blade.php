@@ -11,6 +11,7 @@
             <div class="panel-heading tocustomer">
               <h3 class="panel-title">{{Lang::get('aop.case_home_title')}}</h3>
             </div>
+
           <div class="table-responsive">
             <table class="table table-striped">
              <thead>
@@ -24,13 +25,13 @@
               <tbody>
                <tr>
                 <td><a href="{{ url('cases/read') }}">#1</a></td>
-                <td>Support</td>
+                <td><a href="{{ url('cases/read') }}">Support</a></td>
                 <td><a href="{{ url('cases/read') }}">Case creation</a></td>
                 <td>17/10/2015 14:00 PM</td>
                </tr>
                <tr>
                  <td><a href="{{ url('cases/read') }}">#2</a></td>
-                 <td>Administration</td>
+                 <td><a href="{{ url('cases/read') }}">Administration</a></td>
                  <td><a href="{{ url('cases/read') }}">I did not receive my invoice</a></td>
                  <td>17/10/2015 14:00 PM</td>
                </tr>
@@ -56,12 +57,12 @@
                 <tbody>
                     <tr>
                       <td>17/10/2015 12:30 PM</td>
-                      <td>Testingwithlongword</td>
+                      <td><a href="#">Training</a></td>
                       <td>17/10/2015 14:00 PM</td>
                     </tr>
                     <tr>
                       <td>17/10/2015 12:30 PM</td>
-                      <td>Testingwithlongword</td>
+                      <td><a href="#">Consult meeting</a></td>
                       <td>17/10/2015 14:00 PM</td>
                     </tr>
                 </tbody>

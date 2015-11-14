@@ -11,7 +11,8 @@
 <div class="page-header"><h2>{{ Lang::get('aop.create_case') }}</h2> </div>
 
 @if (count($errors) > 0)
-<div class="alert alert-danger">
+<div class="alert alert-danger alert-dismissible fade in" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> 
 @foreach ($errors->all() as $error)
           <p>{{ $error }}</p>
     @endforeach
