@@ -4,7 +4,7 @@ namespace App\Helpers
 class Helper {
 
 
-/**
+/**A
  * Converts an Array to a SugarCRM-REST compatible name_value_list
  *
  * @param Array $data
@@ -14,7 +14,7 @@ class Helper {
  function convertArrayToNVL($data)
   {
 	  $return = array();
-	  foreach ( $data as $key => $value )
+	  foreach ($data as $key => $value )
 	 	$return[] = array( 'name' => $key, 'value' => $value );
 	  return $return;
   }
@@ -26,7 +26,7 @@ class Helper {
      * @return Array
      */
 
-  function convertNVLToArray ($data ){
+  function convertNVLToArray($data){
     $return = array();
     foreach ($data as $row ){
     	$return[$row['name']] = $row['value'];
@@ -34,4 +34,3 @@ class Helper {
     return $return;
     }
  }
-?>
