@@ -309,7 +309,7 @@
 }
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
-  background-color: #337ab7;
+  background-color: #9e0b3d;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -335,7 +335,7 @@
   background: #eeeeee;
 }
 .bootstrap-datetimepicker-widget table td span.active {
-  background-color: #337ab7;
+  background-color: #9e0b3d;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -356,7 +356,7 @@
   width: 21em;
 }
 .bootstrap-datetimepicker-widget .datepicker-decades .decade {
-  line-height: 1.8em !important;
+  line-height: 1.8em;
 }
 .input-group.date .input-group-addon {
   cursor: pointer;
