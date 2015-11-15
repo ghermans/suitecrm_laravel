@@ -41,4 +41,9 @@ class AdminController extends Controller
     {
       return view('admin.list_mail');
     }
+
+    public function settings()
+    {
+      return view('admin.settings');
+    }
 }
