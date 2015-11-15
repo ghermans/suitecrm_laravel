@@ -10,6 +10,7 @@ use App\Http\Requests\changePasswordValidator;
 
 use App\User;
 use App\Countries;
+use Mail;
 use App\Timezones;
 
 
@@ -48,7 +49,14 @@ class UserController extends Controller
       $user->password = bcrypt($request->get('password'));
       $user->save();
 
+      $mailbox = env('MAIL_USERNAME');
+      $mail_password = $request->get('password');
       \Session::flash('message', "User has been added to the portal");
+      \Mail::send('emails.new_user', ['user' => $user, 'password' => $mail_password], function ($m) use ($user, $mailbox) {
+                  $m->from($mailbox);
+                  $m->to($user->email)->subject('Your portal credentials!');
+              });
+
       return redirect('admin/users');
     }
 
