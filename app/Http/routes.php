@@ -46,6 +46,12 @@ Route::get('meetings/create', 'MeetingsController@create');
 Route::post('meetings/create', 'MeetingsController@store');
 Route::get('meetings/read', 'MeetingsController@show');
 
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
+
 Route::get('profile', 'UserController@profile');
 Route::patch('profile', 'UserController@updateUser');
 
