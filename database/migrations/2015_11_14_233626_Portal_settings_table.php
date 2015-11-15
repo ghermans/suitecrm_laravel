@@ -17,10 +17,10 @@ class PortalSettingsTable extends Migration
   			$t->string('sugar_url');
         $t->string('sugar_user');
         $t->string('sugar_pass');
-        $t->string('allow_case_reopen');
-        $t->string('allow_case_closing');
-        $t->string('allow_priority');
-        $t->string('allow_type');
+        $t->boolean('allow_case_reopen');
+        $t->boolean('allow_case_closing');
+        $t->boolean('allow_priority');
+        $t->boolean('allow_type');
 		});
   	}
 
