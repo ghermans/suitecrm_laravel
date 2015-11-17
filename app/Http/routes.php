@@ -21,14 +21,14 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 Route::get('suitecrm/connect', 'SuiteCrmAuth@Auth');
 
+Route::resource('announcements' , 'AnnouncementsController');
+
 Route::get('admin', 'AdminController@index');
 Route::get('admin/connector', 'AdminController@connector');
 Route::post('admin/connector', 'AdminController@store_connector');
 Route::get('admin/mail', 'AdminController@mail');
 
 Route::get('admin/settings', 'AdminController@settings');
-
-
 
 Route::get('admin/users', 'UserController@index');
 Route::get('admin/users/create', 'UserController@create');
@@ -61,5 +61,4 @@ Route::patch('profile', 'UserController@updateUser');
 Route::get('profile/chpass', 'UserController@profile_chpass');
 Route::patch('profile/chpass', 'UserController@update_chpass');
 
-Route::resource('rest', 'RestController');
 Route::get('quotes', 'QuotesController@index');
