@@ -39,7 +39,7 @@
             <div class="navbar navbar-default" role="navigation">
                 <div class="container-fluid">
     	            <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
+                    <button type="button" class="navbar-toggle collapsed btn btn-custom" data-toggle="collapse" data-target="#navbar-collapse-menu" aria-expanded="false">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -49,7 +49,7 @@
     	            </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="col-sm-offset-3">
-                        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                        <div class="collapse navbar-collapse " id="navbar-collapse-menu">
                             <ul class="nav navbar-nav">
                                 <li class="@if (Request::is('/*')) active @endif">
                                     <a href="{{ url('/') }}">
