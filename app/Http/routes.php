@@ -24,6 +24,10 @@ Route::get('suitecrm/connect', 'SuiteCrmAuth@Auth');
 Route::resource('announcements' , 'AnnouncementsController');
 
 Route::get('admin', 'AdminController@index');
+Route::resource('admin/announcements' , 'AnnouncementsController');
+Route::post('admin/announcements/create' , 'AnnouncementsController@store');
+
+
 Route::get('admin/connector', 'AdminController@connector');
 Route::post('admin/connector', 'AdminController@store_connector');
 Route::get('admin/mail', 'AdminController@mail');

@@ -1,0 +1,90 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Announcements;
+use App\Http\Requests\createAnnouncementValidator;
+
+
+class AnnouncementsController extends Controller
+{
+
+  public function __construct()
+  {
+    $this->middleware('language');
+  }
+
+    public function index()
+    {
+      $list = Announcements::get();
+      return view('announcements.list', ['list' =>  $list]);
+    }
+
+
+    public function create()
+    {
+      return view('announcements.create');
+    }
+
+
+    public function store(createAnnouncementValidator $input, Request $request)
+    {
+      $announcement = new Announcements;
+      $announcement->title = $request->get('title');
+      $announcement->description = $request->get('message');
+      $announcement->save();
+
+      return redirect('announcements');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+
+      return view('announcements.change');
+
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+}
