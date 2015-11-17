@@ -128,7 +128,7 @@ class CountrySeeder extends Seeder {
             ],
             [
                 'country' => 'Bonaire, Sint Eustatius ans Saba',
-                'Dial_nr' => ''
+                'Dial_nr' => '+599'
             ],
             [
                 'country' => 'Bosnia and Herzegovina',
@@ -140,7 +140,7 @@ class CountrySeeder extends Seeder {
             ],
             [
                 'country' => 'Bouvet Island',
-                'Dial_nr' => ''
+                'Dial_nr' => '+47'
             ],
             [
                 'country' => 'Brazil',
@@ -230,7 +230,7 @@ class CountrySeeder extends Seeder {
             ],
             [
                 'country' => 'Cote de azur',
-                'Dial_nr' => ''
+                'Dial_nr' => '+489'
             ],
             [
                 'country' => 'Croatia',
@@ -328,7 +328,7 @@ class CountrySeeder extends Seeder {
             ],
             [
                 'country' => 'French Guiana',
-                'Dial_nr' => ''
+                'Dial_nr' => '+592'
             ],
             [
                 'country' => 'French Polynesia',
@@ -336,7 +336,7 @@ class CountrySeeder extends Seeder {
             ],
             [
                 'country' => 'French Southern Territory',
-                'Dial_nr' => ''
+                'Dial_nr' => '+262'
             ],
 
             // Countries started with an G.
@@ -378,7 +378,7 @@ class CountrySeeder extends Seeder {
             ],
             [
                 'country' => 'Guadaloupe',
-                'Dial_nr' => ''
+                'Dial_nr' => '+590'
             ],
             [
                 'country' => 'Guam',
@@ -586,7 +586,7 @@ class CountrySeeder extends Seeder {
             ],
             [
                 'country' => 'Martinique',
-                'Dial_nr' => ''
+                'Dial_nr' => '+596'
             ],
             [
                 'country' => 'Mauritinia',
