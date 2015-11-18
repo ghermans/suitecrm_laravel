@@ -10,6 +10,9 @@ use App\Http\Requests\changePasswordValidator;
 
 use App\User;
 use App\Countries;
+use Mail;
+use App\Timezones;
+
 
 class UserController extends Controller
 {
@@ -28,7 +31,8 @@ class UserController extends Controller
     public function create()
     {
       $countries = Countries::all();
-        return view('auth.create_user', ['countries' => $countries]);
+      $timezones = Timezones::all();
+        return view('auth.create_user', ['countries' => $countries, 'timezones' => $timezones]);
     }
 
     public function store(Request $request, createUserValidator $input)
@@ -45,7 +49,14 @@ class UserController extends Controller
       $user->password = bcrypt($request->get('password'));
       $user->save();
 
+      $mailbox = env('MAIL_USERNAME');
+      $mail_password = $request->get('password');
       \Session::flash('message', "User has been added to the portal");
+      \Mail::send('emails.new_user', ['user' => $user, 'password' => $mail_password], function ($m) use ($user, $mailbox) {
+                  $m->from($mailbox);
+                  $m->to($user->email)->subject('Your portal credentials!');
+              });
+
       return redirect('admin/users');
     }
 
@@ -54,7 +65,9 @@ class UserController extends Controller
       $country_list = Countries::all();
       $user = User::find($id);
       $errors = \Session::get('msg');
-      return view('auth.display_user', compact('user','country_list','errors'));
+      $timezones = Timezones::all();
+
+      return view('auth.display_user', compact('user','country_list','errors','timezones'));
 
     }
 
@@ -101,7 +114,8 @@ class UserController extends Controller
     public function profile()
     {
         $country_list = Countries::all();
-        return view('auth/profile', ['countries' => $country_list ]);
+        $timezones = Timezones::all();
+        return view('auth/profile', ['countries' => $country_list, 'timezone' => $timezones]);
     }
 
 

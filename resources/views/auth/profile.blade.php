@@ -15,28 +15,28 @@
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
   <div class="form-group">
-    <label for="fname" class="col-sm-2 control-label">{{ Lang::get('aop.first_name') }}</label>
+    <label for="fname" class="col-sm-2 control-label">{{ Lang::get('aop.first_name') }} <span class="text-danger">*</span></label>
     <div class="col-sm-10">
       <input type="text" name="fname" id="fname" value="{{ Auth::user()->fname }}" class="form-control">
     </div>
   </div>
 
   <div class="form-group">
-    <label for="name" class="col-sm-2 control-label">{{ Lang::get('aop.last_name') }}</label>
+    <label for="name" class="col-sm-2 control-label">{{ Lang::get('aop.last_name') }} <span class="text-danger">*</span></label>
     <div class="col-sm-10">
       <input type="text" name="name" id="name" value="{{ Auth::user()->name }}" class="form-control">
     </div>
   </div>
 
   <div class="form-group">
-    <label for="address" class="col-sm-2 control-label">{{ Lang::get('aop.address') }}</label>
+    <label for="address" class="col-sm-2 control-label">{{ Lang::get('aop.address') }} <span class="text-danger">*</span></label>
     <div class="col-sm-10">
       <input type="text" name="address" id="address" value="{{ Auth::user()->address }}" class="form-control">
     </div>
   </div>
 
   <div class="form-group">
-    <label for="postal_code" class="col-sm-2 control-label">{{ Lang::get('aop.city') }}</label>
+    <label for="postal_code" class="col-sm-2 control-label">{{ Lang::get('aop.city') }} <span class="text-danger">*</span></label>
     <div class="col-sm-2">
       <input type="text" name="postal_code" id="postal_code" value="{{ Auth::user()->postal_code }}" placeholder="Postal code" class="form-control">
     </div>
@@ -46,7 +46,7 @@
   </div>
 
   <div class="form-group">
-    <label for="country" class="col-sm-2 control-label">{{ Lang::get('aop.country') }}</label>
+    <label for="country" class="col-sm-2 control-label">{{ Lang::get('aop.country') }} <span class="text-danger">*</span></label>
     <div class="col-sm-10">
       <select name="country" id="country" class="form-control">
       @foreach($countries as $country_item)
@@ -79,6 +79,16 @@
     </div>
   </div>
 
+  <div class="form-group">
+    <label for="timezone" class="col-md-2 control-label">{{ Lang::get('aop.timezone') }}</label>
+    <div class="col-sm-6">
+      <select name="timezone" id="timezone" class="form-control">
+        @foreach ($timezone as $timezone_item)
+       <option value="{{ $timezone_item->timezone }}">{{ $timezone_item->timezone }}</option>
+       @endforeach
+      </select>
+    </div>
+  </div>
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">

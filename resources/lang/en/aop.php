@@ -41,8 +41,11 @@ return [
 	"langen" => "English",
 	"langfr" => "French",
 
-// Needs translation
+	"timezone" => "Timezone",
+
+
 	"meetings_title" => "Meetings",
+	"meetings_home_title" => "Planned meetings",
 	"meetings_title_create" => "Request meeting",
 	"meetings_type" => "Type",
 	"meetings_subject" => "Subject",
@@ -53,6 +56,7 @@ return [
   "my_account" => 'My account',
   "change_password" => 'Change password',
 
+	"case_home_title" => "Open cases",
 	"create_case" => "Create a new case",
 	"list_cases" => "List cases",
 
@@ -83,6 +87,18 @@ return [
   "case_raised_on" => "Date created",
   "own_cases" => "My cases",
   "search" => "Search",
+
+	// Quotes
+	"quotes_home_title" => "Open quotes",
+	"quotes_number" => "Number",
+	"quotes_subject" => "Subject",
+	"quotes_status" => "Status",
+	"quotes_grand_total" => "Grand total",
+	"quotes_valid_untill" => "Valid untill",
+  "confirmed" => "Confirmed",
+	"closed_accepted" => "Closed",
+
+
 
    // Buttons
   "save" => "Save",

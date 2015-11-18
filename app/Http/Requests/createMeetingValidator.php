@@ -18,4 +18,14 @@ class createMeetingValidator extends Request
     			'meetings_message' => 'required'
         ];
     }
+
+    public function messages()
+    {
+      {
+      return [
+          'meetings_subject.required' => 'Please fill in the subject field.',
+          'meetings_message.required' => 'Please fill in the message field'
+          ];
+       }
+    }
 }

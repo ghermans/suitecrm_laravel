@@ -35,6 +35,7 @@ Here's what they represent and how we use them:
 - `In progress` is used for issues where the developers work on.
 - `invalid` is used for incorrect reports?
 - `question` is used for reports where developers ask things to each other.
+- `ready`    is used for issues that are ready for the next release.
 - `wontfix` is used for things that doesn't fix at the moment. But later in the dev process.
 
 For a complete look at our labels, see the project labels page

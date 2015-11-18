@@ -77,6 +77,17 @@
   </div>
 
   <div class="form-group">
+    <label for="timezone" class="col-md-2 control-label">{{ Lang::get('aop.timezone') }} <span class="text-danger">*</span></label>
+    <div class="col-sm-6">
+      <select name="timezone" id="timezone" class="form-control">
+        @foreach ($timezones as $timezone_item)
+       <option value="{{ $timezone_item->timezone }}">{{ $timezone_item->timezone }}</option>
+       @endforeach
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
       <button type="submit" class="btn btn-custom">{{ Lang::get('aop.update') }}</button>
       <button type="button" onclick="location.href='{{ url('admin') }}';" class="btn btn-default">Cancel</button>

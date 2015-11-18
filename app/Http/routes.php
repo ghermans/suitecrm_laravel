@@ -19,15 +19,20 @@ Route::get('auth/login', 'Auth\AuthController@getLogin');
 Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
-// Registration routes...
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
-
 Route::get('suitecrm/connect', 'SuiteCrmAuth@Auth');
 
+Route::resource('announcements' , 'AnnouncementsController');
+
 Route::get('admin', 'AdminController@index');
+Route::resource('admin/announcements' , 'AnnouncementsController');
+Route::post('admin/announcements/create' , 'AnnouncementsController@store');
+
+
 Route::get('admin/connector', 'AdminController@connector');
 Route::post('admin/connector', 'AdminController@store_connector');
+Route::get('admin/mail', 'AdminController@mail');
+
+Route::get('admin/settings', 'AdminController@settings');
 
 Route::get('admin/users', 'UserController@index');
 Route::get('admin/users/create', 'UserController@create');
@@ -48,11 +53,16 @@ Route::get('meetings/create', 'MeetingsController@create');
 Route::post('meetings/create', 'MeetingsController@store');
 Route::get('meetings/read', 'MeetingsController@show');
 
+Route::get('password/email', 'Auth\PasswordController@getEmail');
+Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+Route::post('password/reset', 'Auth\PasswordController@postReset');
+
 Route::get('profile', 'UserController@profile');
 Route::patch('profile', 'UserController@updateUser');
 
 Route::get('profile/chpass', 'UserController@profile_chpass');
 Route::patch('profile/chpass', 'UserController@update_chpass');
 
-Route::resource('rest', 'RestController');
 Route::get('quotes', 'QuotesController@index');

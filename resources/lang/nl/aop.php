@@ -42,8 +42,11 @@ return [
 	"langen" => "Engels",
 	"langfr" => "Frans",
 
+	"timezone" => "Tijdzone",	
+
 	"meetings_title" => "Vergaderingen",
 	"meetings_title_create" => "Nieuwe vergadering",
+	"meetings_home_title" => "Geplande Vergaderingen",
 	"meetings_type" => "Type",
 	"meetings_subject" => "Onderwerp",
 	"meetings_sdate" => "Start datum",
@@ -53,6 +56,7 @@ return [
   "my_account" => 'Mijn account',
   "change_password" => 'Wachtwoord wijzigen',
 
+	"case_home_title" => "Openstaande dossieren",
 	"create_case" => "Nieuw dossier",
 	"list_cases" => "Dossiers",
 
@@ -83,6 +87,16 @@ return [
    "case_raised_on" => "Datum aangemaakt",
    "own_cases" => "Mijn dossiers",
    "search" => "Zoeken",
+
+	 // Quotes
+	 "quotes_home_title" => "Openstaande offertes",
+	 "quotes_number" => "Nummer",
+	 "quotes_subject" => "Onderwerp",
+	 "quotes_status" => "Status",
+	 "quotes_grand_total" => "Totaal bedrag",
+	 "quotes_valid_untill" => "Vervaldatum",
+	 "confirmed" => "Bevestigd",
+	 "closed_accepted" => "Geaccepteerd",
 
    // Buttons
    "save" => "Opslaan",
