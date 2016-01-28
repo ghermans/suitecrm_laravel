@@ -1,11 +1,10 @@
 <?php
 
-namespace App;
+namespace app;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Timezones extends Model
 {
-  protected $table = 'Timezones';
-
+    protected $table = 'Timezones';
 }

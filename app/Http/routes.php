@@ -21,11 +21,11 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 Route::get('suitecrm/connect', 'SuiteCrmAuth@Auth');
 
-Route::resource('announcements' , 'AnnouncementsController');
+Route::resource('announcements', 'AnnouncementsController');
 
 Route::get('admin', 'AdminController@index');
-Route::resource('admin/announcements' , 'AnnouncementsController');
-Route::post('admin/announcements/create' , 'AnnouncementsController@store');
+Route::resource('admin/announcements', 'AnnouncementsController');
+Route::post('admin/announcements/create', 'AnnouncementsController@store');
 
 
 Route::get('admin/connector', 'AdminController@connector');

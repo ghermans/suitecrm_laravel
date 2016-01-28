@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Http\Requests;
+namespace app\Http\Requests;
 
 use App\Http\Requests\Request;
 
 class createUserValidator extends Request
 {
 
-  public function authorize()
-  {
-      return true;
-  }
+    public function authorize()
+    {
+        return true;
+    }
 
     public function rules()
     {
-      return [
+        return [
         'name' => 'required',
         'fname' => 'required',
         'address' => 'required',
@@ -34,7 +34,7 @@ class createUserValidator extends Request
      */
     public function messages()
     {
-      {
+        {
       return [
           'name.required' => 'Please fill in the name field.',
           'fname.required' => 'Please fill in the fname field',

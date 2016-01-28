@@ -137,7 +137,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-	      'Illuminate\Html\HtmlServiceProvider',
+          'Illuminate\Html\HtmlServiceProvider',
         /*
          * Application Service Providers...
          */
@@ -195,8 +195,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-	      'Form'=> 'Illuminate\Html\FormFacade',
-	      'HTML'=> 'Illuminate\Html\HtmlFacade'
+          'Form'=> 'Illuminate\Html\FormFacade',
+          'HTML'=> 'Illuminate\Html\HtmlFacade'
     ],
 
 ];

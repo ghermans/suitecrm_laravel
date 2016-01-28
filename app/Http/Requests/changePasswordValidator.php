@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests;
+namespace app\Http\Requests;
 
 use App\Http\Requests\Request;
 
@@ -23,7 +23,7 @@ class changePasswordValidator extends Request
      */
     public function rules()
     {
-      return [
+        return [
         'current_pass' => 'required',
         'password' => 'required|confirmed|min:6'
       ];

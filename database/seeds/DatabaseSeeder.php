@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
         // $this->call(UserTableSeeder::class);
         $this->call('CountrySeeder');
-    		$this->call('TimezonesSeeder');
-    		$this->call('UserTableSeeder');
+        $this->call('TimezonesSeeder');
+        $this->call('UserTableSeeder');
         Model::reguard();
     }
 }

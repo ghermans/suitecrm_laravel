@@ -1,8 +1,7 @@
-<?php namespace App\Http\Controllers;
+<?php namespace app\Http\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 
 class SuiteCrmAuth extends Controller
@@ -48,8 +47,6 @@ class SuiteCrmAuth extends Controller
      */
     public function Auth()
     {
-
-
         $url = \Config::get('suitecrm.url');
         $username = \Config::get('suitecrm.username');
         $password = \Config::get('suitecrm.password');
@@ -76,5 +73,4 @@ class SuiteCrmAuth extends Controller
 
         return $session_id;
     }
-
 }

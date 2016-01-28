@@ -1,23 +1,22 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class QuotesController extends Controller
 {
-  public function __construct()
+    public function __construct()
     {
-      $this->middleware('auth');
-      $this->middleware('language');
+        $this->middleware('auth');
+        $this->middleware('language');
     }
 
-  public function index()
+    public function index()
     {
-      $lang = \Session::get('lang');
-      return view('quotes.list', ['lang' => $lang]);
+        $lang = \Session::get('lang');
+        return view('quotes.list', ['lang' => $lang]);
     }
 }

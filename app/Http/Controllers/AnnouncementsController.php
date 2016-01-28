@@ -1,44 +1,42 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Announcements;
 use App\Http\Requests\createAnnouncementValidator;
 
-
 class AnnouncementsController extends Controller
 {
 
-  public function __construct()
-  {
-    $this->middleware('language');
-  }
+    public function __construct()
+    {
+        $this->middleware('language');
+    }
 
     public function index()
     {
-      $list = Announcements::get();
-      return view('announcements.list', ['list' =>  $list]);
+        $list = Announcements::get();
+        return view('announcements.list', ['list' =>  $list]);
     }
 
 
     public function create()
     {
-      return view('announcements.create');
+        return view('announcements.create');
     }
 
 
     public function store(createAnnouncementValidator $input, Request $request)
     {
-      $announcement = new Announcements;
-      $announcement->title = $request->get('title');
-      $announcement->description = $request->get('message');
-      $announcement->save();
+        $announcement = new Announcements;
+        $announcement->title = $request->get('title');
+        $announcement->description = $request->get('message');
+        $announcement->save();
 
-      return redirect('announcements');
+        return redirect('announcements');
     }
 
     /**
@@ -49,9 +47,7 @@ class AnnouncementsController extends Controller
      */
     public function show($id)
     {
-
-      return view('announcements.change');
-
+        return view('announcements.change');
     }
 
     /**

@@ -4,7 +4,8 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class CountrySeeder extends Seeder {
+class CountrySeeder extends Seeder
+{
 
     /**
      * Run the database seeds.
@@ -1059,5 +1060,4 @@ class CountrySeeder extends Seeder {
             ]
         ]);
     }
-
 }

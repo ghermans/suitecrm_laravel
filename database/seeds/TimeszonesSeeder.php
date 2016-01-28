@@ -4,9 +4,10 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class TimezonesSeeder extends Seeder {
+class TimezonesSeeder extends Seeder
+{
 
-/**
+    /**
    * Run the database seeds.
    *
    * @return void
@@ -446,5 +447,4 @@ class TimezonesSeeder extends Seeder {
 
         ]);
     }
-
 }

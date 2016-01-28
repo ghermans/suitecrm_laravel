@@ -1,21 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace app\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\createCaseValidator;
 
-
 class CasesController extends Controller
 {
-  public function __construct()
-  {
-    $this->middleware('auth');
-    $this->middleware('language');
-  }
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('language');
+    }
 
   /**
    * Show all cases to the user.
@@ -23,7 +21,7 @@ class CasesController extends Controller
    */
   public function index()
   {
-    return view('cases/list');
+      return view('cases/list');
   }
 
   /**
@@ -31,7 +29,7 @@ class CasesController extends Controller
    */
   public function create()
   {
-    return view('cases/create');
+      return view('cases/create');
   }
 
   /**
@@ -41,7 +39,7 @@ class CasesController extends Controller
    */
   public function store(createCaseValidator $input)
   {
-    // Validator outputs.
+      // Validator outputs.
     // -----------------------------------------------
     // $input->case_type    = $_POST['case_type'];
     // $input->case_subject = $_POST['case_subject'];
@@ -50,8 +48,8 @@ class CasesController extends Controller
     return view('cases/create');
   }
 
-  public function read()
-  {
-    return view('cases/view');
-  }
+    public function read()
+    {
+        return view('cases/view');
+    }
 }

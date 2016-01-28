@@ -1,10 +1,12 @@
 <?php
-namespace App\Http\Middleware;
+namespace app\Http\Middleware;
+
 use Closure;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Input;
+
 class Language
 {
     /**

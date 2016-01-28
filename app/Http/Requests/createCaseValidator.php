@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Requests;
+namespace app\Http\Requests;
+
 use App\Http\Requests\Request;
 
 class createCaseValidator extends Request
@@ -24,8 +25,8 @@ class createCaseValidator extends Request
     {
         return [
           'case_type' => 'required',
-    			'case_subject' => 'required',
-    			'case_message' => 'required'
+                'case_subject' => 'required',
+                'case_message' => 'required'
         ];
     }
 }

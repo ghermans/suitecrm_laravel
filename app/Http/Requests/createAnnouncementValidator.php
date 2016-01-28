@@ -1,20 +1,21 @@
 <?php
 
-namespace App\Http\Requests;
+namespace app\Http\Requests;
+
 use App\Http\Requests\Request;
 
 class createAnnouncementValidator extends Request
 {
-  public function authorize()
+    public function authorize()
     {
         return true;
     }
 
-  public function rules()
+    public function rules()
     {
-      return [
+        return [
           'title' => 'required',
           'message' => 'required'
         ];
-      }
     }
+}
