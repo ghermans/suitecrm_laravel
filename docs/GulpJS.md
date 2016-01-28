@@ -1,7 +1,7 @@
 GulpJS:
 =================================
 
-SuiteCRM laravel portal have Gulpjs support for developer who wants to contribute to the project.
+Suite Portal supports Gulpjs for developers who wants to contribute to the project.
 
 ## Installation
 
