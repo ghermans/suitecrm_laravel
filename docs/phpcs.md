@@ -1,8 +1,6 @@
 phpcs:
 =================================
 
-Suite Portal supports Gulpjs for developers who wants to contribute to the project.
-
 It is known by now that every project should follow any code standard.
 
 ## Installation
