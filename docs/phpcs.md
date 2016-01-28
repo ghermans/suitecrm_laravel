@@ -19,6 +19,7 @@ It is known by now that every project should follow any code standard.
     sudo mv phpcbf.phar /bin/phpcbf
 
 3 Make the files executable
+
     sudo chmod +x /bin/phpcs
     sudo chmod +x /bin/phpcbf
 
