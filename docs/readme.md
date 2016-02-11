@@ -2,8 +2,8 @@
 
 - [Project info]()
 - [Using GulpJS]()
-- [Using phpcs]() 
-- [Using phpunit]() 
+- [Using phpcs](phpcs.md) 
+- [Using phpunit]()
 - [Contributing]()
 - [Scss-lint]()
 - [License]()

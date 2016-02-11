@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => 'http://portal.app',
+    'url' => 'http://suiteportal.dev',
 
     /*
     |--------------------------------------------------------------------------
@@ -138,6 +138,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
 	      'Illuminate\Html\HtmlServiceProvider',
+        Spatie\Permission\PermissionServiceProvider::class,
+        
         /*
          * Application Service Providers...
          */
