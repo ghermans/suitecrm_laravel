@@ -39,20 +39,20 @@ class Suite
      *
      * @var string
      */
-     private $rest_user = "";
+    private $rest_user = "";
      /**
      * SugarCRM Pass
      *
      * @var string
      */
-     private $rest_pass = "";
+    private $rest_pass = "";
 
      /**
-     	 * SugarCRM Session ID
-     	 *
-     	 * @var string
-     	 */
-         protected $sid = null;
+         * SugarCRM Session ID
+         *
+         * @var string
+         */
+    protected $sid = null;
 
     public function __construct()
     {
@@ -86,44 +86,44 @@ class Suite
     }
 
           /**
-      	 * Login with user credentials
-      	 *
-      	 * @param string $user
-      	 * @param string $password_hash
-      	 * @param boolean $admin_check
-      	 * @return boolean
-      	 */
-         public function login()
-         {
-             $login_params = array(
-                   'user_name' => $this->rest_user,
-                   'password'  => md5($this->rest_pass),
-               );
+         * Login with user credentials
+         *
+         * @param string $user
+         * @param string $password_hash
+         * @param boolean $admin_check
+         * @return boolean
+         */
+    public function login()
+    {
+        $login_params = array(
+              'user_name' => $this->rest_user,
+              'password'  => md5($this->rest_pass),
+          );
 
-             $result = $this->rest_request('login', array(
-                   'user_auth' => $login_params,
-            "application_name" => "",
-                   'name_value_list' => array(array('name' => 'notifyonsave', 'value' => 'true'))
-               ));
-             if (isset($result['id'])) {
-                 $this->sid = $result['id'];
-                 return $result['id'];
-             } elseif (isset($result['name'])) {
-                 return false;
-             }
-             return false;
-         }
+        $result = $this->rest_request('login', array(
+              'user_auth' => $login_params,
+        "application_name" => "",
+              'name_value_list' => array(array('name' => 'notifyonsave', 'value' => 'true'))
+          ));
+        if (isset($result['id'])) {
+            $this->sid = $result['id'];
+            return $result['id'];
+        } elseif (isset($result['name'])) {
+            return false;
+        }
+        return false;
+    }
 
           /**
-      	 * Logout
-      	 */
-          public function logout()
-          {
-              $this->rest_request('logout', array(
-                  'session'    => $this->sid,
-              ));
-              $this->sid = null;
-          }
+         * Logout
+         */
+    public function logout()
+    {
+        $this->rest_request('logout', array(
+            'session'    => $this->sid,
+        ));
+        $this->sid = null;
+    }
 
     public static function display()
     {
@@ -323,9 +323,10 @@ class Suite
             'id' => $note_id
             );
 
-        $result = $this->rest_request('get_note_attachment',
-                $call_arguments
-                );
+        $result = $this->rest_request(
+            'get_note_attachment',
+            $call_arguments
+        );
 
         return $result;
     }
