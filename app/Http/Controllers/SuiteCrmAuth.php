@@ -81,8 +81,10 @@ class SuiteCrmAuth extends Controller
     {
       $restClient = new \App\Classes\Suite;
       $print = $restClient->login();
-      var_dump($print);
-
+      if(!$restClient->login()){
+            return("Failed to connect to SuiteCRM. Please check your settings.");
+        }
+        else(var_dump($print));
     }
 
 }
