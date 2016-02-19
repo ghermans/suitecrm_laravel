@@ -82,7 +82,7 @@ class SuiteCrmAuth extends Controller
       $restClient = new \App\Classes\Suite;
       $print = $restClient->login();
       var_dump($print);
-      
+
     }
 
 }
