@@ -84,7 +84,9 @@ class SuiteCrmAuth extends Controller
       if(!$restClient->login()){
             return("Failed to connect to SuiteCRM. Please check your settings.");
         }
-        else(var_dump($print));
+        else{
+          return("Connected with the SuiteCRM.");
+      }
     }
 
 }
