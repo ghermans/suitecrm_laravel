@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Classes\Suite;
 use Illuminate\Http\Request;
 
 class SuiteCrmAuth extends Controller
@@ -75,6 +75,14 @@ class SuiteCrmAuth extends Controller
         $session_id = $login_result->id;
 
         return $session_id;
+    }
+
+    public function Test()
+    {
+      $restClient = new \App\Classes\Suite;
+      $print = $restClient->login();
+      var_dump($print);
+      
     }
 
 }
