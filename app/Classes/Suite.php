@@ -90,9 +90,10 @@ class Suite{
       	 */
          public function login(){
            $login_params = array(
-       			'user_name' => $rest_user,
-       			'password'  => $rest_pass,
+       			'user_name' => $this->rest_user,
+       			'password'  => $this->rest_pass,
        		);
+          
        		$result = $this->rest_request( 'login', array(
        			'user_auth' => $login_params,
             "application_name" => "",
