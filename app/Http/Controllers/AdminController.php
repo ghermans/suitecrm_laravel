@@ -24,8 +24,9 @@ class AdminController extends Controller
 
     public function connector()
     {
-        $url = \Config::get("suitecrm.url");
-        $username = \Config::get("suitecrm.username");
+        $url = config('suitecrm.url');
+        $username = config('suitecrm.username');
+
         return view('admin.connector', compact('url', 'username'));
     }
 
