@@ -33,11 +33,6 @@ class AnnouncementsController extends Controller
 
     public function store(createAnnouncementValidator $input, Request $request)
     {
-        $announcement = new Announcements;
-        $announcement->title = $request->get('title');
-        $announcement->description = $request->get('message');
-        $announcement->save();
-
         Announcements::create($request);
         return redirect('announcements');
     }
