@@ -38,6 +38,7 @@ class AnnouncementsController extends Controller
         $announcement->description = $request->get('message');
         $announcement->save();
 
+        Announcements::create($request);
         return redirect('announcements');
     }
 
