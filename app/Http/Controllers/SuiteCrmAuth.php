@@ -50,9 +50,9 @@ class SuiteCrmAuth extends Controller
     {
 
 
-        $url = \Config::get('suitecrm.url');
-        $username = \Config::get('suitecrm.username');
-        $password = \Config::get('suitecrm.password');
+        $url = config('suitecrm.url');
+        $username = config('suitecrm.username');
+        $password = config('suitecrm.password');
 
         //login ------------------------------
         $login_parameters = array(
