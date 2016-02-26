@@ -12,17 +12,17 @@ class PortalSettingsTable extends Migration
      */
     public function up()
     {
-  		Schema::create('Portal_settings', function(Blueprint $t) {
-  			$t->increments('id');
-  			$t->string('sugar_url');
-        $t->string('sugar_user');
-        $t->string('sugar_pass');
-        $t->boolean('allow_case_reopen');
-        $t->boolean('allow_case_closing');
-        $t->boolean('allow_priority');
-        $t->boolean('allow_type');
-		});
-  	}
+        Schema::create('Portal_settings', function (Blueprint $t) {
+            $t->increments('id');
+            $t->string('sugar_url');
+            $t->string('sugar_user');
+            $t->string('sugar_pass');
+            $t->boolean('allow_case_reopen');
+            $t->boolean('allow_case_closing');
+            $t->boolean('allow_priority');
+            $t->boolean('allow_type');
+        });
+    }
 
     /**
      * Reverse the migrations.
@@ -31,6 +31,6 @@ class PortalSettingsTable extends Migration
      */
     public function down()
     {
-      Schema::drop('Portal_settings');
+        Schema::drop('Portal_settings');
     }
 }

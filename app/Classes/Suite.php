@@ -56,11 +56,11 @@ class Suite
 
     public function __construct()
     {
-        $sugar_url =   \Config::get('suitecrm.url');
+        $sugar_url =   config('suitecrm.url');
         $this->rest_url =  $sugar_url."/service/v4_1/rest.php";
         $this->base_url = 'http://' . preg_replace('~^http://~', '', $sugar_url);
-        $this->rest_user =  \Config::get('suitecrm.username');
-        $this->rest_pass =  \Config::get('suitecrm.password');
+        $this->rest_user =  config('suitecrm.username');
+        $this->rest_pass =  config('suitecrm.password');
     }
 
     private function rest_request($call_name, $call_arguments)
