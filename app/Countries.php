@@ -4,7 +4,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Countries extends Model
 {
-
-    protected $table = 'Countries';
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+	protected $table = 'Countries';
 
 }

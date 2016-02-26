@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Timezones extends Model
 {
-    protected $table = 'Timezones';
+  /**
+   * The database table used by the model.
+   *
+   * @var string
+   */
+  protected $table = 'Timezones';
 
 }

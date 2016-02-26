@@ -37,6 +37,11 @@ class UserController extends Controller
         return view('auth.create_user', $data);
     }
 
+    /**
+     * @param Request $request
+     * @param createUserValidator $input
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function store(Request $request, createUserValidator $input)
     {
 
@@ -63,6 +68,10 @@ class UserController extends Controller
         return redirect('admin/users');
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function edit($id)
     {
         $data['country_list'] = Countries::all();
@@ -74,6 +83,11 @@ class UserController extends Controller
 
     }
 
+    /**
+     * @param $id
+     * @param Request $request
+     * @return mixed
+     */
     public function updateUser($id, Request $request)
     {
         $user = User::find($id);
@@ -90,6 +104,10 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    /**
+     * @param Request $request
+     * @return mixed
+     */
     public function update_profile(Request $request)
     {
         $user = User::find($id);
@@ -106,6 +124,10 @@ class UserController extends Controller
         return redirect()->back();
     }
 
+    /**
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function destroy($id)
     {
         $user = User::find($id);
@@ -130,6 +152,11 @@ class UserController extends Controller
     }
 
 
+    /**
+     * @param Request $request
+     * @param changePasswordValidator $input
+     * @return mixed
+     */
     public function update_chpass(Request $request, changePasswordValidator $input)
     {
         $user = auth()->user();

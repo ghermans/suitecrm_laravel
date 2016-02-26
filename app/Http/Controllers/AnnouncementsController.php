@@ -31,7 +31,12 @@ class AnnouncementsController extends Controller
     }
 
 
-    public function store(createAnnouncementValidator $input, Request $request)
+  /**
+   * @param createAnnouncementValidator $input
+   * @param Request $request
+   * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+  public function store(createAnnouncementValidator $input, Request $request)
     {
         Announcements::create($request);
         return redirect('announcements');
