@@ -45,7 +45,7 @@ Guidelines for bug reports:
 
 1. **Validate and lint your code** - to ensure that the bug is in your own code or not.
 2. **Use the github issue search** - check if the issue is already reported.
-3. **Check if the issue has been fixed** - try to reproduce it using the lastest `master` or `development` branch in the repo.
+3. **Check if the issue has been fixed** - try to reproduce it using the latest `master` or `development` branch in the repo.
 4. **isolate the problem** - So the developing doesn't have hard times finding the possible bug.
 
 A good bug report shouldn't leave others needing to chase you up for more information.
