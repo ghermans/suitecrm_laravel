@@ -20,8 +20,8 @@ class AnnouncementsController extends Controller
 
     public function index()
     {
-        $list = Announcements::get();
-        return view('announcements.list', ['list' => $list]);
+        $data['list'] = Announcements::get();
+        return view('announcements.list', $data);
     }
 
 
