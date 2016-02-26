@@ -8,7 +8,7 @@ Tell us which version of Suite portal you are using.
 
 ## Platform Version
 
-Tell us which Operating System distribution and version SuiteCRM is running on.
+Tell us which Operating System distribution and version Suite portal is running on.
 
 ## Replication Case
 
