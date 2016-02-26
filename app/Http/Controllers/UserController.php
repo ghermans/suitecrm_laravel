@@ -139,7 +139,7 @@ class UserController extends Controller
     public function profile()
     {
         $data['countries'] = Countries::all();
-        $data['timezones'] = Timezones::all();
+        $data['timezone'] = Timezones::all();
 
         return view('auth/profile', $data);
     }
