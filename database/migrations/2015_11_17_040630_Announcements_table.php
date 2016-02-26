@@ -12,16 +12,14 @@ class AnnouncementsTable extends Migration
      */
     public function up()
     {
-      Schema::create('announcements', function(Blueprint $table)
-      {
-        $table->increments('id');
-        $table->string('title');
-        $table->text('description');
-        $table->string('lang');
-        $table->string('status');
-        $table->timestamps();
-      }
-    );
+        Schema::create('announcements', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('title');
+            $table->text('description');
+            $table->string('lang');
+            $table->string('status');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -31,6 +29,6 @@ class AnnouncementsTable extends Migration
      */
     public function down()
     {
-      Schema::drop('announcements');
+        Schema::drop('announcements');
     }
 }

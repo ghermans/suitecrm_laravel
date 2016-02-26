@@ -41,5 +41,11 @@ php artisan migrate
 php artisan db:seed
 ```
 
+## Versioning
+
+For transparency into our release cycle and in striving to maintain backward compatibility, SuiteCRM_laravel is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
+
+See [the Releases section of our GitHub project](https://github.com/idevelopment/suitecrm_laravel/releases) for changelogs for each release version of Suite_CRM_laravel.
+
 # Graph of work completed
 [![Throughput Graph](https://graphs.waffle.io/idevelopment/suitecrm_laravel/throughput.svg)](https://waffle.io/idevelopment/suitecrm_laravel/metrics)

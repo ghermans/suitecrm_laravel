@@ -13,51 +13,52 @@ use App\Http\Requests\createAnnouncementValidator;
 class AnnouncementsController extends Controller
 {
 
-  public function __construct()
-  {
-    $this->middleware('language');
-  }
+    public function __construct()
+    {
+        $this->middleware('language');
+    }
 
     public function index()
     {
-      $list = Announcements::get();
-      return view('announcements.list', ['list' =>  $list]);
+        $data['list'] = Announcements::get();
+        return view('announcements.list', $data);
     }
 
 
     public function create()
     {
-      return view('announcements.create');
+        return view('announcements.create');
     }
 
 
-    public function store(createAnnouncementValidator $input, Request $request)
+  /**
+   * @param createAnnouncementValidator $input
+   * @param Request $request
+   * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+  public function store(createAnnouncementValidator $input, Request $request)
     {
-      $announcement = new Announcements;
-      $announcement->title = $request->get('title');
-      $announcement->description = $request->get('message');
-      $announcement->save();
-
-      return redirect('announcements');
+        Announcements::create($request);
+        return redirect('announcements');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
 
-      return view('announcements.change');
+        return view('announcements.change');
 
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -68,8 +69,8 @@ class AnnouncementsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \Illuminate\Http\Request $request
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -80,7 +81,7 @@ class AnnouncementsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
