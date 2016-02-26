@@ -9,6 +9,11 @@ class SuiteCrmAuth extends Controller
 {
     /**
      * function to make cURL request
+     *
+     * @param $method
+     * @param $parameters
+     * @param $url
+     * @return mixed
      */
     public function call($method, $parameters, $url)
     {
@@ -50,9 +55,9 @@ class SuiteCrmAuth extends Controller
     {
 
 
-        $url = \Config::get('suitecrm.url');
-        $username = \Config::get('suitecrm.username');
-        $password = \Config::get('suitecrm.password');
+        $url = config('suitecrm.url');
+        $username = config('suitecrm.username');
+        $password = config('suitecrm.password');
 
         //login ------------------------------
         $login_parameters = array(
@@ -79,14 +84,13 @@ class SuiteCrmAuth extends Controller
 
     public function Test()
     {
-      $restClient = new \App\Classes\Suite;
-      $print = $restClient->login();
-      if(!$restClient->login()){
-            return("Failed to connect to SuiteCRM. Please check your settings.");
+        $restClient = new \App\Classes\Suite;
+
+        if (! $restClient->login()) {
+            return ("Failed to connect to SuiteCRM. Please check your settings.");
+        } else {
+            return ("Connected with the SuiteCRM.");
         }
-        else{
-          return("Connected with the SuiteCRM.");
-      }
     }
 
 }
