@@ -29,7 +29,11 @@ class AdminController extends Controller
       return view('admin.connector', compact('url', 'username'));
     }
 
-    public function store_connector(Request $request, ConnectorValidator $input)
+  /**
+   * @param Request $request
+   * @param ConnectorValidator $input
+     */
+  public function store_connector(Request $request, ConnectorValidator $input)
     {
       // This needs to be written into a middleware.
        \Config::set('suitecrm.url', $request->get('hostname'));

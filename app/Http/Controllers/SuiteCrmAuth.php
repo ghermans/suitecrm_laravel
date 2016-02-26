@@ -9,6 +9,11 @@ class SuiteCrmAuth extends Controller
 {
     /**
      * function to make cURL request
+     *
+     * @param $method
+     * @param $parameters
+     * @param $url
+     * @return mixed
      */
     public function call($method, $parameters, $url)
     {
