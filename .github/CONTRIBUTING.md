@@ -1,13 +1,10 @@
-# Contributing to suiteCRM Laravel portal.
+# Contributing to Suite portal.
 
-Looking to contribute something to this repo? **Here is how u can help.**
-
-Please take a moment to review this document in order to make the contribution
-process easy and effective for everyone involved.
+Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved.
 
 Follow these guidelines helps to communicate that you respect the time of the developers
-managing and developing this open-source project. In return, they should reciprocate
-that respect in adressing your issue or assesing patches and features.
+managing and developing this open-source project.
+In return, they should reciprocate that respect in adressing your issue or assesing patches and features.
 
 ## Using the issue tracker
 
@@ -59,30 +56,11 @@ Do other browsers show the bug differently?
 What would you expect to be the outcome?
 All these details will help people to fix any potential bugs.
 
-Example:
-
-> Short and descriptive example bug report title
->
-> A summary of the issue and the browser/OS environment in which it occurs. If
-> suitable, include the steps required to reproduce the bug.
->
-> 1. This is the first step
-> 2. This is the second step
-> 3. Further steps, etc.
->
-> `<url>` - a link to the reduced test case
->
-> Any other information you want to share that is relevant to the issue being
-> reported. This might include the lines of code that you have identified as
-> causing the bug, and potential solutions (and your opinions on their
-> merits).
-
 ## Feature requests
 
-Feature requests are welcome. But take a moment to find out whether your idea
-fits with the scope and aims of the project. It's up to *you* to make a strong
-case to convince the project's developers of the merits of this feature. Please
-provide as much detail and context as possible.
+Feature requests are welcome, however take a moment to find out whether your idea fits with the scope and aims of the project.
+It's up to *you* to make a strong case to convince the project's developers of the merits of this feature.
+Please provide as much detail and context as possible.
 
 
 ## Pull requests
@@ -100,8 +78,8 @@ Please adhere to the [coding guidelines](#code-guidelines) used throughout the
 project (indentation, accurate comments, etc.) and any other requirements
 (such as test coverage).
 
-**Do not edit the `.css` files in the public directory or** Those files are automatically generated. You should edit the
-source files in `/resources/assets/scss` instead.
+**Do not edit the `.css` files in the public directory or** Those files are automatically generated.
+You should edit the source files in `/resources/assets/scss` instead.
 
 Adhering to the following process is the best way to get your work
 included in the project:
