@@ -12,7 +12,7 @@ use App\User;
 use App\Countries;
 use Mail;
 use App\Timezones;
-
+use Bouncer;
 
 class UserController extends Controller
 {
@@ -139,7 +139,7 @@ class UserController extends Controller
     public function profile()
     {
         $data['countries'] = Countries::all();
-        $data['timezones'] = Timezones::all();
+        $data['timezone'] = Timezones::all();
 
         return view('auth/profile', $data);
     }

@@ -14,6 +14,25 @@ class UserTableSeeder extends Seeder {
 */
     public function run()
     {
-      User::create(['fname' => 'Admin','name' => 'User', 'address' => 'Foobar street 4', 'city' => 'Brussels', 'country' => 'Belgium',  'email' => 'admin@suiteportal.net', 'password' => bcrypt("demo123456")]);
+
+      // Truncate method.
+      \DB::statement('SET foreign_key_checks=0');
+      User::truncate();
+      \DB::statement('SET foreign_key_checks=1');
+
+      $user = new User();
+      $user->fname = 'Admin';
+      $user->name  = 'User';
+      $user->address = 'Foobar street 4';
+      $user->city = 'Brussels';
+      $user->country = 'Belgium';
+      $user->email = 'admin@suiteportal.net';
+      $user->password = bcrypt("demo123456");
+
+      if ($user->save()) {
+        $assign = User::find($user->id);
+        Bouncer::assign('admin')->to($assign);
+        Bouncer::refreshFor($assign);
+      }else(Log::alert('admin user registration failed'));
     }
-}
+  }
