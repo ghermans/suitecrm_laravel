@@ -1,4 +1,4 @@
-# SuitePanel
+# Suite portal
 
 [![Join the chat at https://gitter.im/ghermans/suitecrm_laravel](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ghermans/suitecrm_laravel?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](LICENSE)
@@ -43,9 +43,9 @@ php artisan db:seed
 
 ## Versioning
 
-For transparency into our release cycle and in striving to maintain backward compatibility, SuiteCRM_laravel is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
+For transparency into our release cycle and in striving to maintain backward compatibility, Suite portal is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
 
-See [the Releases section of our GitHub project](https://github.com/idevelopment/suitecrm_laravel/releases) for changelogs for each release version of Suite_CRM_laravel.
+See [the Releases section of our GitHub project](https://github.com/idevelopment/suitecrm_laravel/releases) for changelogs for each release version of Suite portal.
 
 # Graph of work completed
 [![Throughput Graph](https://graphs.waffle.io/idevelopment/suitecrm_laravel/throughput.svg)](https://waffle.io/idevelopment/suitecrm_laravel/metrics)
