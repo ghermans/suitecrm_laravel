@@ -138,8 +138,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
 	      'Illuminate\Html\HtmlServiceProvider',
-        Spatie\Permission\PermissionServiceProvider::class,
-        
+        Silber\Bouncer\BouncerServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -198,7 +198,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 	      'Form'=> 'Illuminate\Html\FormFacade',
-	      'HTML'=> 'Illuminate\Html\HtmlFacade'
+	      'HTML'=> 'Illuminate\Html\HtmlFacade',
+        'Bouncer' => Silber\Bouncer\BouncerFacade::class,
     ],
 
 ];
