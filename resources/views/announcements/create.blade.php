@@ -30,7 +30,7 @@
     <div class="form-group">
       <label for="message" class="form-label col-md-2">Message <span class="text-danger">*</span></label>
         <div class="col-md-10">
-          <textarea name="message" id="message" rows="10" class="form-control"></textarea>
+          <textarea name="description" id="message" rows="10" class="form-control"></textarea>
         </div>
       </div>
 
