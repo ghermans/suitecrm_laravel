@@ -12,7 +12,7 @@ use App\User;
 use App\Countries;
 use Mail;
 use App\Timezones;
-
+use Bouncer;
 
 class UserController extends Controller
 {
