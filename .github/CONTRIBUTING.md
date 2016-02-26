@@ -11,10 +11,10 @@ that respect in adressing your issue or assesing patches and features.
 
 ## Using the issue tracker
 
-The issue issue tracker is the preffered channel for bug reports, features requests
+The issue issue tracker is the preferred channel for bug reports, features requests
 and submitting pull requests, but please respect the following restrictions:
 
-- Please **do not** use the issue tracker for personal support requests. The gitter channel
+- Please **do not** use the issue tracker for personal support requests. The Gitter channel
 is a better place to get help.
 
 - Please **do not** derail or troll issues. Keep the discussion on topic and respect the opinions
@@ -22,7 +22,7 @@ of others.
 
 - Please make an individual commit for each pull request.
 
-- Keep decriptions short and simple.
+- Keep descriptions short and simple.
 
 ## Issues and labels
 
@@ -33,7 +33,6 @@ Here's what they represent and how we use them:
 - `duplicate` is used to marked duplicated issue reports.
 - `High Priority` is used to mark things that needs to be done ASAP.
 - `In progress` is used for issues where the developers work on.
-- `invalid` is used for incorrect reports?
 - `question` is used for reports where developers ask things to each other.
 - `ready`    is used for issues that are ready for the next release.
 - `wontfix` is used for things that doesn't fix at the moment. But later in the dev process.
@@ -112,18 +111,18 @@ included in the project:
 
    ```bash
    # Clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/<repo>.git
+   git clone https://github.com/<username>/suitecrm_laravel.git
    # Navigate to the newly cloned directory
-   cd bootstrap
+   cd suitecrm_laravel
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/user/repo.git
+   git remote add upstream https://github.com/user/suitecrm_laravel.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
 
    ```bash
-   git checkout master
-   git pull upstream master
+   git checkout hotfix
+   git pull upstream hotfix
    ```
 
 3. Create a new topic branch (off the main project development branch) to
@@ -152,7 +151,7 @@ included in the project:
    ```
 
 7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description against the `dev` branch.
+    with a clear title and description against the `dev` or `hotfix` branch.
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owners to
 license your work under the terms of the [MIT License](LICENSE) (if it
